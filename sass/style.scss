@@ -1,0 +1,927 @@
+@import "fuentes";
+@import "variables";
+@import "operaciones";
+*{
+    margin: 0;
+    padding: 0;
+}
+.navi{
+    text-decoration: none;
+    color: $blanquito;
+    font-family: "Barlow", sans-serif ;
+    font-weight:bold;
+    text-shadow: 4px 4px 5px black;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    margin-top: 10px;   
+}
+.barraNav{
+    padding-left:2%;
+    padding-right: 2%;
+    height: 140px;
+    
+}
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:90%; 
+}
+.textoImagen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    color:$blanquito;
+    text-shadow:3px 3px 4px black;
+    font-size: 20px;
+    padding-bottom: 2%;
+}
+.headerr{
+    width:100%;
+    display: flex;
+    flex-direction: column;  
+}
+h1{
+    font-family: "Prompt", sans-serif;
+    font-size: 40px;
+    font-weight: bolder;
+    color:$blanquito;
+    text-shadow: 2px 2px 3px black;
+}
+.copyright{
+    width: 70%;
+}
+.contactUsTitulo{
+    font-family: "Paytone One", sans-serif;
+    font-size: 25px;
+}
+.contactUs{
+    width: 70%;
+}
+.footerColumnas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    align-content: space-around;
+    padding-bottom: 20px;
+}   
+.preFooter{
+    background-color: rgb(88, 176, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%; 
+}
+.footer{
+    background-color: rgb(34, 30, 34);
+    color: $blanquito;
+    font-size: 40px;
+    padding-bottom: auto;
+    margin-bottom: 0%;
+    width: 100%;
+}
+.nuestrasRedesSociales{
+    width: 70%;
+}
+.preFooterPregunta{
+    font-family: "Barlow", sans-serif;
+    font-size: 35px;
+    color: black;
+    font-weight: bolder;
+}
+.queEsSumar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 15px 10px 15px;
+    align-items: center;
+}
+.queEsSumarTexto{
+    display: flex;
+    font-family: "Dosis", sans-serif;
+    justify-content: center;
+    font-size: 20px;
+    text-align: center;
+    width: 80%;
+    padding-top: 20px;
+}
+.ofertas{   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 20px;
+    width: 100%;  
+}
+.acaVaElCarousel1 {
+    width: 80vw;
+    max-width: 1000px;
+    min-width: 320px;
+    margin: auto;
+    padding-bottom:3%;
+}
+.imagenDeCarousel{
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+}
+
+.flyers{
+    display: flex;
+    flex-direction: column;
+    padding-top: 35px;
+    align-items: center;
+    justify-content: space-evenly;   
+}
+.sanRafael{
+    width: 100%;
+    height: 100%;
+}
+.flyerSanRafael{
+    height: 30%;
+    width: 90%;
+    padding-bottom: 25px;
+}
+.cordoba{
+    width: 100%;
+    height: 100%; 
+}
+.flyerCordoba{
+    height: 30%;
+    width: 90%;
+    padding-bottom: 25px;
+}
+.mendoza{
+    width: 100%;
+    height: 100%;
+}
+.flyerMendoza{
+    height: 30%;
+    width: 90%;
+}
+.verMasBoton{
+    text-decoration: none;
+    display: flex;
+    font-size: 25px;
+    justify-content: space-around;
+    color: $blanquito;
+    font-family: "Poppins", sans-serif ;
+    background-color: $colorh1;
+    border-radius: 8px;
+    width: 140px;
+    text-shadow:1px 1px 2px black;
+}
+.verMasFlyers{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+body{
+    text-align: center;
+    font-family: "Barlow", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background: rgb(218, 183, 133);
+}
+#ulContacto{
+    width: 100%;
+    padding-left: 0;
+}
+h2{
+    font-family: "Barlow", sans-serif;
+    font-size: 30px;
+    color:$colorh1;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 3px black;
+    text-align: center;
+}
+.icon {
+    padding-right: 0px;
+    position: fixed;
+    justify-content: right;
+    width: 5%;
+    height: 5%;
+    margin-right: 0px;
+}
+
+.formasDePago{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+}
+.fdp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+.fdpi{
+    width: 100%;
+}
+span{
+    font-size: 18px;
+    font-family: "Paytone One", sans-serif;
+}
+h5{
+    font-size: 15px;
+}
+.containerviajes{
+    background-image: url(../img/landscape-argentina-mountain-lake-wallpaper-preview.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 1%;
+}
+.textoImagenViajes{
+    padding-top: 10px;
+    color: $blanquito;
+    text-shadow:3px 3px 4px black;
+    font-size: 25px;
+}
+.presentacionViajes{
+    display:flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.mainViajes{
+    padding:5% 27% 5% 27%;
+}
+.divMainViajes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+.paraElFinde{
+    padding-top:10%;
+}
+.flyersFinde{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: auto;
+}
+.PrimerLugar{
+    background-image: url(../img/quintaolivos.jpeg);
+    background-size: 100% 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.SegundoLugar{
+    background-image: url(../img/elena.webp);
+    background-size: 100% 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.botonFlyerFinde{
+    text-decoration: none;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-around;
+    color: $blanquito;
+    font-family: "Poppins", sans-serif ;
+    background-color: $colorh1;
+    border-radius: 8px;
+    width: auto;
+    text-shadow:1px 1px 2px black;
+}
+.quintaMilagros{
+    background-image: url(../img/granjamilagros.jpeg);
+    background-size: 100% 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.primerPaquete{
+    background-image: url(../img/mendoza.jpeg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.segundoPaquete{
+    background-image: url(../img/bariloche.jpeg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.tercerPaquete{
+    background-image: url(../img/mdq.jpeg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.cuartoPaquete{
+    background-image: url(../img/salta.jpeg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.quintoPaquete{
+    background-image: url(../img/puerto\ madryn.jpeg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.sextoPaquete{
+    background-image: url(../img/federacion.jpeg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.septimoPaquete{
+    background-image: url(../img/cataratas.jpeg);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+#paqueteee{
+    background-size: 99% 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.bodyContacto{
+    background-color: rgb(218, 183, 133);
+    width: 100%;
+}
+.containercontacto{
+    background-image: url(../img/glaciares1.jpg);
+    background-size: 100% 100%;
+    height: 215px;
+}
+@import "formulario";
+
+.containerNuestraHistoria{
+    background-image: url(../img/probar3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 1%;
+    height: 210px;
+}
+#tituloNuestraHistoria{
+    font-size: 40px;
+}
+.ulNH{
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    padding-left: 0px;
+}
+#naviNH{
+    text-decoration: none;
+    color: $blanquito;
+    font-family: "Barlow", sans-serif ;
+    font-size: 20px;
+    font-weight:bold;
+}
+#headerrMobile{
+    width: 90%;
+}
+#backgroundGaleria{
+    background-image: url(../img/cerro.jpg);
+    background-size: 100% 600px;
+    height: 250px;
+}
+.noMeTomaElEstilo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.bodyGaleria{
+    background-color: rgb(218, 183, 133);
+}
+.formularioContacto{
+    padding-bottom: 25px;
+}
+.imagenAboutMe{
+    width: 100%;
+}
+.aboutMe{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom:3px ;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+.textoFormulario{
+    padding-bottom: 5%;
+}
+@media(min-width: 768px){
+    h1{
+        font-size: 60px;
+    }
+    #tituloNuestraHistoria{
+        font-size: 60px;
+    }
+    .descubrirBoton{
+        font-size: 20px;
+        border-radius: 6px;
+        width: 110px;
+    }
+    h2{
+        font-size: 42px;
+    }
+    .contactanosBoton{
+        width: 175px;
+    }
+    .prefooter{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .container{
+        height: 315px;
+    }
+    .flyerCordoba{
+        height: 800px;
+    }
+    .flyerSanRafael{
+        height: 800px;
+    }
+    .flyerMendoza{
+        height: 800px;
+    }
+    .PrimerLugar{
+        height: 400px;
+    }
+    .SegundoLugar{
+        height: 400px;
+    }
+    .quintaMilagros{
+        height: 400px;
+    }
+    #paqueteee{
+        height: 400px;
+    }
+    .mainViajes{
+        padding-top: 8%;
+    }
+    .mainGaleria{
+        padding-bottom: 30px;
+    }
+    .containerNuestraHistoria{
+        padding-bottom: 1%;
+        height: 250px;
+    }
+    h5{
+        font-size: 25px;
+    }
+}
+@media(min-width: 1048px){
+    .container{
+        background-image:url(../img/112126\ \(1\).jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 600px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 610px;
+    }
+    .headerr{
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header{
+        background-color: rgba(0, 0, 0, 0.664);
+        height: 80px;
+    }
+    .presentacion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .descubrirBoton{
+        text-decoration: none;
+        display: flex;
+        font-size: 25px;
+        justify-content: space-around;
+        color: $blanquito;
+        font-family: "Poppins", sans-serif ;
+        background-color: $colorh1;
+        border-radius: 8px;
+        width: 140px;
+        text-shadow:1px 1px 2px black;
+    }
+    .descubrirBoton:hover{
+        transform:scale(1.5);
+        transition-property: all;
+        transition-duration: 1s;
+    }
+    .barraNav{
+        padding-left:20px;
+    }
+    .queEsSumar{
+        padding-top: 7em;
+        padding-bottom:3em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .queEsSumarTitulo{
+        font-size: 4em;
+    }
+    .queEsSumarTexto{
+        display: flex;
+        font-family: "Dosis", sans-serif;
+        justify-content: center;
+        font-size: 2em;
+        padding-top: 2em;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    .textoImagen{
+        padding-top: 300px;
+        color:$blanquito;
+        text-shadow:3px 3px 4px black;
+        font-size: 40px;
+    }
+    .verMasFlyers{
+        display: flex;
+        justify-content: center;
+        padding-top: 2em;
+    }
+    .verMasBoton{
+        text-decoration: none;
+        display: flex;
+        font-size: 25px;
+        justify-content: space-around;
+        color: $blanquito;
+        font-family: "Poppins", sans-serif ;
+        background-color: $colorh1;
+        border-radius: 8px;
+        width: 140px;
+        text-shadow:1px 1px 2px black;
+    }
+    h1{
+        font-family: "Prompt", sans-serif;
+        font-size: 50px;
+        font-weight: bolder;
+        color:$blanquito;
+        padding-top: 2px;
+        padding-left: 20px;
+        text-shadow: 3px 3px 4px black;
+    }
+    nav ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        font-size: 25px;
+        margin-top: 40px;
+    }
+    .navi{
+        text-decoration: none;
+        color: $blanquito;
+        font-family: "Barlow", sans-serif ;
+        font-weight:bold;
+        text-shadow: 2px 2px 3px black;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    body{
+        background-color: rgb(218, 183, 133);
+        width: 100%;
+        text-align: center; 
+    }
+    .ofertas{   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 5em;
+        padding-bottom: 2em;
+    }
+    h2{
+        font-family: "Barlow", sans-serif;
+        font-size: 50px;
+        color:$colorh1;
+        display: flex;
+        justify-content: center;
+        text-shadow: 2px 2px 3px black;
+        text-align: center;
+    }
+    .flyershover:hover{
+        transform:scale(1.1);
+        transition-property: all;
+        transition-duration: 1s;
+    }
+    .paquetehover:hover{
+        transform:scale(1.1);
+        transition-property: all;
+        transition-duration: 1s;
+    }
+    .flyerSanRafael{
+        height: 360px;
+        width: 265px;
+    }
+    .flyerCordoba{
+        height: 360px;
+        width: 265px;
+    }
+    .flyerMendoza{
+        height: 360px;
+        width: 265px;
+    }
+    .flyers{
+        display: flex;
+        flex-direction: row;
+        padding-top: 100px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .formasDePago{
+        padding-top: 5em;
+    }
+    .fdp{
+        display: flex;
+        padding-top: 45px;
+        padding-right: 40px;
+        padding-left: 40px;
+        padding-bottom: 3em;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .fdpi:hover{
+        transition-property: all;
+        transition-duration: 1;
+        transform:scale(1.5);
+    }
+    .contactanosBoton{
+        text-decoration: none;
+        display: flex;
+        font-size: 35px;
+        justify-content: space-around;
+        color: $blanquito;
+        font-family: "Poppins", sans-serif ;
+        background-color: $colorh1;
+        border-radius: 35px;
+        width: 340px;
+        text-shadow:2px 2px 3px black;
+    }
+    .contactanosBoton:Hover{
+        transition-property: all;
+        transition-duration: 0.5s;
+        transform:scale(1.1);
+    }
+    @import "footermonitor";
+    h5{
+        font-size: 15px;
+    }
+    .nuestrasRedesSociales{
+        width: 350px;
+    }
+    .containerviajes{
+        background-image: url(../img/landscape-argentina-mountain-lake-wallpaper-preview.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 600px;
+    }
+    .textoImagenViajes{
+        padding-top: 150px;
+        color: $blanquito;
+        text-shadow:3px 3px 4px black;
+        font-size: 35px;
+    }
+    .presentacionViajes{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        padding-bottom: 100px;
+    }
+    .mainViajes {
+        padding: 5% 15% 5% 15%;
+    }
+    .PrimerLugar{
+        background-size: 400px 400px;
+        height: 100%;
+    }
+    .SegundoLugar{
+        background-size: 400px 400px;
+        height: 100%;
+    }
+    .quintaMilagros{
+        background-size: 850px 400px;
+        height: 100%;
+    }
+    .flyersFinde{
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 400px 400px;
+        grid-template-areas: "primerLugar segundoLugar"
+        "quintaMilagros quintaMilagros";
+        justify-content: center;
+        column-gap: 50px;
+        row-gap: 50px;
+        padding-top: 100px;
+        height: 100%;
+    }
+    .paraElFinde{
+        padding-bottom: 4em;
+        padding-top: 4em;
+    }
+    .quintaMilagros{
+        width: 850px;
+    }
+    .botonFlyerFinde{
+        text-decoration: none;
+        display: flex;
+        font-size: 28px;
+        justify-content: space-around;
+        color: $blanquito;
+        font-family: "Poppins", sans-serif ;
+        background-color: $colorh1;
+        border-radius: 8px;
+        width: auto;
+        text-shadow:1px 1px 2px black;
+    }
+    .flyersPaquetesUno{
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 400px 400px;
+        grid-template-areas: "primerPaquete segundoPaquete"
+        "tercerPaquete cuartoPaquete";
+        row-gap: 50px;
+        column-gap: 50px;
+        justify-content: center;
+        margin-top: 10%;
+    }
+    .flyersPaquetesDos{
+        display: grid;
+        grid-template-columns: 250px 250px 250px;
+        grid-template-rows: 400px;
+        grid-template-areas: "quintoPaquete sextoPaquete septimoPaquete";
+        row-gap: 50px;
+        column-gap: 50px;
+        padding-top: 50px;
+        justify-content: center;
+    }
+    #paqueteee{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 100%;
+    }
+    .bodyContacto{
+        background-image:url(../img/glaciares1.jpg);
+        background-repeat: repeat;
+        background-size: 100% 100%;
+    }
+    .formularioConTexto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .textoContacto{
+        width: 20%;
+    }
+    .containercontacto{
+        background-image: none;
+        height: auto;
+    }
+    .mb-3{
+        padding-top: 15px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .col{
+        padding-top: 15px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .textoFormulario{
+        width: 45%;
+        padding-left: 0;
+        padding-right: 40;
+        font-weight: bolder;
+    }
+    #backgroundGaleria{
+        height: 378px;
+    }
+    .primerCarousel{
+        display: flex;
+        padding-top: 50px;
+    }
+    .noMeTomaElEstilo{
+        font-size: 50px;
+    }
+    .tituloSumar{
+        padding-top: 10px;
+        padding-left: 6px;
+        font-family: "Prompt", sans-serif;
+        font-size: 48px;
+        font-weight: bolder;
+        color:$blanquito;
+        text-shadow: 3px 3px 4px black;
+    }
+    #headerrMobile{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .ulNH{
+        flex-direction: row;
+        height: 50px;
+        align-items: center;
+    }
+    #naviNH{
+        font-size: 25px;
+    }
+    #tituloNuestraHistoria{
+        font-size: 48px;
+    }
+    .tituloSumar{
+        padding-left: 25px;
+    }
+    .containerNuestraHistoria{
+        height: 475px;
+        background-size: 100% 600px;
+    }
+    .aboutMe{
+        display: flex;
+        flex-direction: row;
+        padding: 10% 5% 10% 5%;
+        align-items: center;
+        border:none;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 75%;
+    }
+    .mainNH{
+        display: flex;
+        align-items: center;
+        max-width: 90vw;
+    }
+    .bloqueConDescripcion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(241, 195, 95);
+        width: 1000px;
+        height: 600px;
+        border:5px solid black;
+        border-radius: 45px;
+        position: absolute;
+        margin-left: 500px ;
+        justify-content: space-around;
+        left:333px
+    }
+    .imagenAboutMe{
+        width: 900px;
+        height: 1000px;
+    }
+    .textoQuienEsSumarViajes{
+        font-size: 30px;
+        padding-bottom: 20px;
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+
+}
