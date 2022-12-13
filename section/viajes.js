@@ -7,10 +7,23 @@ let apellido= prompt ("Ingrese su apellido:").toUpperCase();
 let direccion= prompt ("Ingrese su direccion de correo electrónico").toUpperCase();
 
 function saludar(){
-    alert ("Bienvenidx" + cliente + apellido + "a Sumar viajes")
+    alert ("Bienvenidx " + cliente + " " + apellido + " a Sumar viajes")
 }
 
 const arrayReservas = []
+
+class paquete {
+    constructor (destino, precio, duracion) {
+        this.destino = destino;
+        this.precio = precio;
+        this.duracion = duracion;
+    }
+}
+
+const viajeSanLuis = new paquete ("San Luis", "25000", "5 DIAS");
+const viajeMendoza  = new paquete ("Mendoza", "30000", "7 DIAS");
+const viajeCataratas  = new paquete ("San Luis", "20000", "3 DIAS");
+const viajeSalta = new paquete ("Salta", "35000", "10 DIAS");
 
 function elegirOpcion(){
     let opcion;
@@ -33,7 +46,21 @@ function elegirOpcion(){
             break;
     }    
 }
+function flow(){
+    let opcion = elegirOpcion();
 
+    if (opcion == "consultar"){
+        consultar();
+    }else if (opcion == "reservar"){
+        reservar();
+    }else if (opcion == "cancelar"){
+        cancelar();
+    }else if (opcion =="misreservas"){
+        misReservas();
+    }else{
+        alert("Que lo disfrutes!");
+    }
+}
 function getDia(){
     let diaElegido
     do{
@@ -59,13 +86,21 @@ function getDestino(){
     let destinoElegido
     const destinosDisponibles = ["San Luis", "Mendoza", "Cataratas", "Salta"]
     do{
-        destinoElegido = parseInt (prompt("Elija el destino, siendo \n 1."+ destinosDisponibles[0] + "\n 2." + destinosDisponibles[1] + "\n 3." + destinosDisponibles[2] + "\n 4." + destinosDisponibles[3]))
-    }while (destinoElegido !=1 && destinoElegido !=2 & destinoElegido !=3)
+        destinoElegido = parseInt (prompt("Elija el destino, siendo \n 1."+ viajeSanLuis.destino + "\n 2." + viajeMendoza.destino + "\n 3." + viajeCataratas.destino + "\n 4." + viajeSalta.destino))
+        if (destinoElegido == 1){
+            destinoElegido= "SanLuis"
+        }else if (destinoElegido == 2){
+            destinoElegido = "Mendoza"
+        }else if (destinoElegido == 3){
+            destinoElegido = "Cataratas"
+        }else {
+            destinoElegido = "Salta"
+        }
+    }while (destinoElegido !="SanLuis" && destinoElegido !="Mendoza" && destinoElegido !="Cataratas" && destinoElegido !="Salta" )
     return destinoElegido;
 }
 
 function consultar (){
-    if(opcion == "consultar"){
         let dia = getDia();
         let mes = getMes();
         let anio = getAnio ();
@@ -76,10 +111,13 @@ function consultar (){
     }else {
         alert("Hay disponibilidad de viaje.");
     }
+    let quiereRealizar = parseInt (prompt("Si quiere realizar otra operacion escriba 1, de lo contrario escriba cualquier otro numero"))
+        if (quiereRealizar == 1){
+            flow();
+        }
 }
-}
+
 function reservar(){
-    if (opcion == "reservar"){
         let dia = getDia();
         let mes = getMes();
         let anio = getAnio();
@@ -88,14 +126,30 @@ function reservar(){
         if (anio == 2022 && mes < 12){
             alert("Esos destinos ya fueron visitados.");
         }else {
-            arrayReservas.push("Reserva para el dia" + dia + "del mes" + mes + "del año" + anio + "con destino a " + destino);
+            arrayReservas.push(destino);
+        }
+        let quiereRealizar = parseInt (prompt("Si quiere realizar otra operacion escriba 1, de lo contrario escriba cualquier otro numero"))
+        if (quiereRealizar == 1){
+            flow();
         }
     }
-}
 
 function cancelar (){
-    let cualCancelo = parseInt (prompt("Elija de la siguiente lista, que elemento quiere eliminar:" + arrayReservas))
-    arrayReservas.splice(cualCancelo-1, cualCancelo)
+    let cualCancelo = parseInt (prompt("Elija de la siguiente lista, que elemento quiere eliminar:" + " " + arrayReservas))
+    arrayReservas.splice(cualCancelo-1, cualCancelo);
+    let quiereRealizar = parseInt (prompt("Si quiere realizar otra operacion escriba 1, de lo contrario escriba cualquier otro numero"))
+        if (quiereRealizar == 1){
+            flow();
+        }
 }
 
+function misReservas(){
+    alert(arrayReservas[0])
+    let quiereRealizar = parseInt (prompt("Si quiere realizar otra operacion escriba 1, de lo contrario escriba cualquier otro numero"))
+        if (quiereRealizar == 1){
+            flow();
+        }
+}
 
+saludar();
+flow();
